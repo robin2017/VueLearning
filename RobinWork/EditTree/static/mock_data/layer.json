@@ -1,0 +1,25 @@
+{
+  "FuncItem": [
+    {
+      "Name": "基础软件",
+      "Prefix": "pre",
+      "FuncItem": [
+        {
+          "Name": "集成框架",
+          "Prefix": "pre",
+          "FuncItem": [
+            {
+              "Name": "框架基础段",
+              "Prefix": "ZHTSZH"
+            },
+            {
+              "Name": "框架基础段",
+              "Prefix": "ZHTSZH"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
