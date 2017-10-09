@@ -1,0 +1,45 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robin Test</title>
+    <script src="../js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+<h1 align="center">hello,robin</h1>
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <!--模版中放入太多逻辑，难以复用-->
+    <p>Simple reverse message: "{{ message.split('').reverse().join('') }}"</p>
+    <!--通过计算属性得到结果，可以复用，可以缓冲-->
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    <!--通过方法得到结果，没有缓冲-->
+    <p>Computed reversed message: "{{ reversedMessageM() }}"</p>
+    <p>Computed reversed message: "{{ user() }}"</p>
+</div>
+</body>
+<script type="text/javascript">
+
+    var vm = new Vue({
+        el: '#example',
+        data: {
+            message: 'Hello'
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+            },
+            user() {
+                return this.message.split('').reverse().join('')
+            }
+        },
+        methods: {
+            reversedMessageM:function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+</script>
+</html>
+
